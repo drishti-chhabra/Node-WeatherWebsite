@@ -13,7 +13,9 @@ const forecast=(lat,long,callback)=>{
         }
         else{
             callback(undefined, 
-                body.current.weather_descriptions[0]+' current temperature is '+ body.current.temperature + ' degrees but it feels like '+ body.current.feelslike+ ' degrees'
+                body.current.weather_descriptions[0]+', Current temperature is '+ body.current.temperature 
+                + ' degrees. It feels like '+ body.current.feelslike+ ' degrees. Wind speed is '
+                + body.current.wind_speed +' km/h. Humidity is '+body.current.humidity
             )
         }
     })
